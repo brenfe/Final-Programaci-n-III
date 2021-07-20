@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  broadcast: one
+  garment: one
+  host: one
+
+two:
+  broadcast: two
+  garment: two
+  host: two

@@ -1,0 +1,32 @@
+<%= form_with(model: clothing_use) do |form| %>
+  <% if clothing_use.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clothing_use.errors.count, "error") %> prohibited this clothing_use from being saved:</h2>
+
+      <ul>
+        <% clothing_use.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :broadcast_id, class: "form-label" %>
+    <%= form.collection_select(:broadcast_id, Broadcast.all, :id, :program_number, { :include_blank => true }, {class: 'form-select'} )  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :garment_id, class: "form-label" %>
+    <%= form.collection_select(:garment_id, Garment.all, :id, :description, { :include_blank => true }, {class: 'form-select'} )  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :host_id, class: "form-label" %>
+    <%= form.collection_select(:host_id, Host.all, :id, :full_name, { :include_blank => true }, {class: 'form-select'} )  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

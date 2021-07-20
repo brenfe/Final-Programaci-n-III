@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Broadcast:</strong>
+  <%= @clothing_use.broadcast_id %>
+</p>
+
+<p>
+  <strong>Garment:</strong>
+  <%= @clothing_use.garment_id %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @clothing_use.host_id %>
+</p>
+
+<%= link_to 'Edit', edit_clothing_use_path(@clothing_use) %> |
+<%= link_to 'Back', clothing_uses_path %>
